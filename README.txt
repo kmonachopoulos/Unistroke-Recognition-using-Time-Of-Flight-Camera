@@ -52,7 +52,7 @@ that are closest to the camera with respect to all other vissible objects.
 
 Identified 22/28 gestures. Accuracy : 0.7857142857142857
 
-![alt tag](https://github.com/kmonachopoulos/Unistroke-Recognition-using-Time-Of-Flight-Camera/blob/master/Visualize_Sample_Results.png)
+![classification_sample_results](https://user-images.githubusercontent.com/3832904/37982819-8a504c88-31e9-11e8-835d-2abb1f65e3a3.png)
 
 To improve the accuracy, you could create more accurate Decision points using even smaller division windows and store more representative movements to $1 Unistroke Recognizer.
 
