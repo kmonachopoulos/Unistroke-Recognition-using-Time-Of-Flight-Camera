@@ -48,7 +48,7 @@ that are closest to the camera with respect to all other vissible objects.
 
 ### Sample Results
 
-![alt tag](Unistroke-Recognition-using-Time-Of-Flight-Camera/Classification_Sample_Results.png)
+![visualize_sample_results](https://user-images.githubusercontent.com/3832904/37982756-5ac2bcee-31e9-11e8-9dcb-5b231f8b8856.png)
 
 Identified 22/28 gestures. Accuracy : 0.7857142857142857
 
