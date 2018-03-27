@@ -1,39 +1,39 @@
-### Introduction
+## Introduction
 This is a personal project that uses Time of flight (TOF) Depth images to classify the gestures using  $1 Unistroke Recognizer [http://depts.washington.edu/madlab/proj/dollar/]
 Given a sequence of depth imagesrecorded from a DepthSense camera I created a C++ application that isolates the hand in the scene, computes the nearest object in-front
 of the camera (hand) in the depth-image space), and uses the sequence of positions to classify the stroke.
 
-### Dataset copyrights
+## Dataset copyrights
 I don't own the dataset copyrights I am just using the data for this project.
 
-### Implementation Guide
-###### Extract Dataset
-'''
+## Implementation Guide
+#### Extract Dataset
+```
 cd Data
 tar -xvzf Data.tar.gz
-'''
+```
 
-###### Dependencies
+#### Dependencies
 Install Opencv from source
 
-###### How to Build
-'''10.2.139.23
+#### How to Build
+```
 mkdir build
 cd build
 cmake ..
 make
-'''
+```
 
-###### How to Run
-'''
+#### How to Run
+```
 cd <root project dir>
 ./bin/MultistrokeRec
-'''
+```
 
 This will run the gestures example by example using the small dataset that I have.
 
 
-### Algorithm
+## Algorithm
 
 For each frame I calculate a segmentation threshold using Segmentation by iteration method. After the hand (which is the closest object on the camera) is
 segmented, I calculate the mean of mass sequentially, by dividing the image into smaller parts and keeping the one with the bigger mass. The smallest
@@ -46,7 +46,7 @@ The gesture sequence is parameterized, so that the sequence (stroke) starts ~ at
 to identify when a movement starts, but you can extend the functionality for that. This algorithm does not recognize the hand, but segments whatever objects
 that are closest to the camera with respect to all other vissible objects.
 
-### Sample Results
+## Sample Results
 
 ![visualize_sample_results](https://user-images.githubusercontent.com/3832904/37982756-5ac2bcee-31e9-11e8-9dcb-5b231f8b8856.png)
 
