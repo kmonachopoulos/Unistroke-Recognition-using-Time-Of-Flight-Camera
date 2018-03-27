@@ -50,9 +50,7 @@ that are closest to the camera with respect to all other vissible objects.
 
 ![visualize_sample_results](https://user-images.githubusercontent.com/3832904/37982756-5ac2bcee-31e9-11e8-9dcb-5b231f8b8856.png)
 
-Identified 22/28 gestures. Accuracy : 0.7857142857142857
-
-![classification_sample_results](https://user-images.githubusercontent.com/3832904/37982819-8a504c88-31e9-11e8-835d-2abb1f65e3a3.png)
+Identified 22/28 gestures. **Sample Accuracy : 0.7857142857142857**
 
 To improve the accuracy, you could create more accurate Decision points using even smaller division windows and store more representative movements to $1 Unistroke Recognizer.
 
