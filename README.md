@@ -49,10 +49,12 @@ Identified 22/28 gestures. **Sample Accuracy : 0.7857142857142857**
 
 To improve the accuracy, you could create more accurate Decision points using (1) even smaller division windows and (2) store more representative movements to $1 Unistroke Recognizer.
 
-(1)
+(1) Create more accurate Decision points
+
 1) In Source/ImageProcessing.cpp, change the division proposion in line 211 and 212. (However, this will increase the latency)
 
-(2)
+(2) Store more representative movements
+
 1) In Source/ImageProcessing.cpp , comment line 284
 2) In Source/ImageProcessing.cpp , uncomment line 285
 3) Capture the coordinates of specific gesture (or calculate the average)
