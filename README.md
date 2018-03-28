@@ -34,12 +34,12 @@ This will run all the sample gestures, using the small dataset that I have, one 
 
 ## Algorithm
 
-For each frame I calculate a segmentation threshold using the **Segmentation by Iteration** method. Based on that threshold, the hand (which is the closest object on the camera) is segmented. Later on, I calculate the center of the hand using **mean of mass** sequentially, by dividing the image into smaller parts and keeping the one with the bigger mass in it. The smallest window will have the biggest probability to have the hand segmented inside. The division proportion, can also be set manually.
+For each frame I calculate a segmentation threshold using the **Segmentation by Iteration** method. Based on that threshold, the hand (which is the closest object on the camera) is segmented. Later on, I calculate the center of the hand using **mean of mass** sequentially, by dividing the image into smaller parts and keeping the one with the bigger mass in it. The smallest window that I end-up with, will have the biggest probability to have the hand segmented inside. The division proportion, can also be set manually.
 
-After the detection, a bounding box is attached to the object and the coordinates begin to be record. When the recording is finished, the coordinates are fed into the $1 Unistroke Recognizer that is responsible to recognize the sequence using **nearest neighbor** algortihm.
+After the detection, a bounding box is attached to the object and the coordinates begin to be recorded. When the recording is finished, the coordinates are fed into the $1 Unistroke Recognizer that is responsible to recognize the sequence using **nearest neighbor** algortihm.
 
-I have changed the pattern coordinates of some recognition gestures and added some more to cover the needs of the project. The original sequence was recorded at 30 fps. The gesture sequence is parameterized, so that the sequence (stroke) starts ~ at the early frames and finish at the last. The algorithm, for now is not capable to identify when a movement starts, but you can extend the functionality for that. This algorithm does not recognize the hand, but segments whatever objects
-is closer to the camera with respect to all other vissible objects, using base image processing techniques.
+I have changed the pattern coordinates of some recognition gestures and added some more to cover the needs of the project. The original sequence was recorded at 30 fps. The gesture sequence is parameterized, so that the sequence (stroke) starts ~ at the early frames and finish ~ at the last. The algorithm, for now is not capable to identify when the movement begins, but you can extend the functionality for that. This algorithm does not recognize the hand, but segments whatever objects
+is closer to the camera with respect to all other vissible objects, this way you can classify the stroke even if the hand is not visible, using base image processing techniques.
 
 ## Sample Results
 
@@ -47,8 +47,12 @@ is closer to the camera with respect to all other vissible objects, using base i
 
 Identified 22/28 gestures. **Sample Accuracy : 0.7857142857142857**
 
-To improve the accuracy, you could create more accurate Decision points using even smaller division windows and store more representative movements to $1 Unistroke Recognizer.
+To improve the accuracy, you could create more accurate Decision points using (1) even smaller division windows and (2) store more representative movements to $1 Unistroke Recognizer.
 
+(1)
+1) In Source/ImageProcessing.cpp, change the division proposion in line 211 and 212. (However, this will increase the latency)
+
+(2)
 1) In Source/ImageProcessing.cpp , comment line 284
 2) In Source/ImageProcessing.cpp , uncomment line 285
 3) Capture the coordinates of specific gesture (or calculate the average)
