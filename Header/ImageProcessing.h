@@ -3,7 +3,7 @@
 Project       : Depth Stroke Recognition
 File          : ImageProcessing.h
 Description   : Image Processing functions
-Author        : Konstantinos Monahopoulos
+Author        : Konstantinos Monachopoulos
 ------------------------------------------------------------------------------------------------------------------------------------------
 */
 #pragma once
