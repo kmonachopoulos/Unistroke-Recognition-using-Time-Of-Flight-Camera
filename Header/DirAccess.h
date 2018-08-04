@@ -3,7 +3,7 @@
 Project       : Depth Stroke Recognition
 File          : DirAccess.h
 Description   : Directory access. Stores the dir and the file names.
-Author        : Konstantinos Monahopoulos
+Author        : Konstantinos Monachopoulos
 ------------------------------------------------------------------------------------------------------------------------------------------
 */
 #pragma once
