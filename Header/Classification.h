@@ -3,7 +3,7 @@
 Project       : Depth Stroke Recognition
 File          : Classification.h
 Description   : This code uses unistroke $1 gesture recognition library created by Baylor Wetzeli
-Author        : Konstantinos Monahopoulos
+Author        : Konstantinos Monachopoulos
 ------------------------------------------------------------------------------------------------------------------------------------------
 */
 #pragma once
