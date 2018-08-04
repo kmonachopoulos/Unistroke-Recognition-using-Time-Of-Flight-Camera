@@ -3,7 +3,7 @@
 Project       : Depth Stroke Recognition
 File          : ImgProc.cpp
 Description   : Image processing functions
-Author        : Konstantinos Monahopoulos
+Author        : Konstantinos Monachopoulos
 ------------------------------------------------------------------------------------------------------------------------------------------
 */
 
