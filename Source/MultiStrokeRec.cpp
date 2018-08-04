@@ -3,7 +3,7 @@
 Project       : Depth Stroke Recognition
 File          : MultiStrokeRec.cpp
 Description   : Stroke Classification based on depth images
-Author        : Konstantinos Monahopoulos
+Author        : Konstantinos Monachopoulos
 ------------------------------------------------------------------------------------------------------------------------------------------
 */
 
